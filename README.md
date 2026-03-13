@@ -83,4 +83,4 @@ During these projects I practiced:
 
 
 
-Created by **[Your Name]** while learning frontend development.
+
