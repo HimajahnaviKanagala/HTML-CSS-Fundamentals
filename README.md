@@ -1,86 +1,173 @@
-# HTML & CSS Fundamentals
+# React Basics Practice ⚛️
 
-This repository contains beginner practice projects built using **HTML5 and CSS3**.
-The goal of these projects is to practice semantic HTML, responsive layouts, Flexbox, and CSS Grid.
-
----
-
-## Projects Included
-
-### 1. Responsive Navigation Menu
-
-A responsive navigation bar that adapts to different screen sizes.
-
-**Features**
-
-* Flexbox layout
-* Mobile responsive design
-* Hamburger menu for small screens
-* Clean navigation structure
-
-**Technologies Used**
-
-* HTML5
-* CSS3
-* Flexbox
-* Media Queries
+This project is built to learn and practice the fundamentals of React, including components, JSX, props, list rendering, and component composition.
 
 ---
 
-### 2. Personal Portfolio Landing Page
+## 🚀 Technologies Used
 
-A single-page portfolio website to showcase personal information and projects.
-
-**Sections**
-
-* Header / Navigation
-* Hero section
-* About section
-* Projects section
-* Contact section
-* Footer
-
-**Technologies Used**
-
-* HTML5 semantic elements
-* CSS3
-* Flexbox
-* Responsive design
+* React
+* Vite
+* JavaScript (ES6+)
+* CSS
 
 ---
 
-### 3. Card Layout with CSS Grid
+## 📚 Concepts Covered
 
-A responsive card layout built using CSS Grid.
+This project demonstrates the following core concepts of React:
 
-**Features**
+### 1. Functional Components
 
-* Grid layout system
-* Responsive cards
-* Clean UI card design
+* Creating reusable UI components using functions
+* Importing and exporting components
 
-**Technologies Used**
+### 2. JSX (JavaScript XML)
 
-* HTML5
-* CSS3
-* CSS Grid
-* Responsive design
+* Writing HTML inside JavaScript
+* Using JavaScript expressions with `{}`
 
----
+Example:
 
-## What I Learned
-
-During these projects I practiced:
-
-* Writing **semantic HTML structure**
-* Styling with **CSS fundamentals**
-* Building layouts using **Flexbox**
-* Creating responsive designs using **Media Queries**
-* Designing structured layouts using **CSS Grid**
-* Organizing project folders and files
+```jsx
+<h1>Hello {name}</h1>
+```
 
 ---
 
+### 3. Props
 
+* Passing data from parent to child components
+* Props destructuring
 
+Example:
 
+```jsx
+function UserCard({ name, age }) {
+  return <h2>{name}</h2>
+}
+```
+
+---
+
+### 4. Props.children (Component Composition)
+
+* Wrapping components inside reusable layouts
+
+Example:
+
+```jsx
+function Card({ children }) {
+  return <div className="card">{children}</div>
+}
+```
+
+Usage:
+
+```jsx
+<Card>
+  <h2>Hello</h2>
+</Card>
+```
+
+---
+
+### 5. Conditional Rendering
+
+* Display UI based on conditions
+
+Example:
+
+```jsx
+{isLoggedIn ? <p>Welcome</p> : <p>Please Login</p>}
+```
+
+---
+
+### 6. Rendering Lists
+
+* Using `map()` to render dynamic lists
+* Using unique `key` for each item
+
+Example:
+
+```jsx
+products.map(product => (
+  <ProductCard key={product.id} name={product.name} />
+))
+```
+
+---
+
+### 7. Component Composition
+
+* Breaking UI into smaller reusable components
+* Creating component hierarchy
+
+---
+
+## 📁 Project Structure
+
+```
+src
+ ├── components
+ │     ├── Navbar.jsx
+ │     ├── Button.jsx
+ │     ├── Card.jsx
+ │     ├── UserCard.jsx
+ │     ├── ProductCard.jsx
+ │     ├── ProductList.jsx
+ │     ├── BlogPost.jsx
+ │     └── BlogList.jsx
+ │
+ ├── data
+ │     ├── products.js
+ │     └── posts.js
+ │
+ ├── styles.css
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
+
+## ✨ Features
+
+* Reusable components (Button, Card)
+* User card with props
+* Product list rendered dynamically
+* Blog list rendered using array data
+* Conditional rendering example
+* Clean and simple UI styling
+
+---
+
+## ▶️ Getting Started
+
+Follow these steps to run the project locally:
+
+```bash
+npm install
+npm run dev
+```
+
+Then open:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🎯 Learning Outcome
+
+By building this project, I learned:
+
+* How React works using a component-based architecture
+* How to use JSX to create UI
+* How to pass and use props
+* How to render lists dynamically
+* How to use props.children for composition
+* How to structure a React project properly
+
+---
